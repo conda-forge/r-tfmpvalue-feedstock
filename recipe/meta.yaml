@@ -53,7 +53,7 @@ about:
     the score with given P-value.  This package is an interface to code originally made
     available by  Helene Touzet and Jean-Stephane Varre, 2007,  Algorithms Mol Biol
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}\/lib\/R\/share\/licenses\/GPL-2'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
 extra:
    recipe-maintainers:
