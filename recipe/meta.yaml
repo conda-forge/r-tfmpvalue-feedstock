@@ -16,7 +16,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,7 +26,8 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('m2w64_cxx') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -57,9 +58,11 @@ about:
     by  Helene Touzet and Jean-Stephane Varre, 2007,  Algorithms Mol Biol:2, 15. Touzet
     and Varre (2007) <DOI:10.1186/1748-7188-2-15>.
   license_family: GPL2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - dpryan79
     - MathiasHaudgaard
     - FrodePedersen
