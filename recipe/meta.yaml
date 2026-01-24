@@ -1,4 +1,4 @@
-{% set version = "0.0.9" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/TFMPvalue_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/TFMPvalue/TFMPvalue_{{ version }}.tar.gz
-  sha256: b9db56e75e2cee840d8b7861686dec07ee2c40cbc7d55361e5d04f1bf0c65de7
+  sha256: 8f870a7088830c62b425275360fd0ee0c36daeaa466e5664e7f18a812549ce87
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
